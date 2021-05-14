@@ -1,0 +1,90 @@
+body{
+    font-family: inherit;
+    background-color: #f0f0f0;
+}
+
+h1{
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 40px;
+}
+
+.faq-container{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.faq{
+    border: 1px solid #9fa4a8;
+    background: transparent;
+    margin: 20px 0px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq.active::before,
+.faq.active::after{
+    content: '\f075';
+    color: #2ecc71;
+    font-family:'Font Awesome 5 Free';
+    font-size: 7rem;
+    opacity: 0.2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.faq.active::before{
+    color: turquoise;
+    top: -30px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.faq.active{
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-text{
+    display: none;
+    margin-top: 25px;
+    color: rgb(87, 87, 87);
+    font-weight: bold;
+}
+
+.faq-title{
+    margin: 0 35px 0 0 ;
+}
+
+.faq.active .faq-text{
+    display: block;
+}
+
+.faq-toggle{
+    border: none;
+    background: transparent;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 22px;
+    right: 15px;
+    font-size: 16px;
+}
+
+.faq.active .fa-times{
+    color: red;
+    display: block;
+}
+
+.faq.active .fa-chevron-down{
+    display: none;
+}
+
+.faq .fa-times{
+    display: none;
+}
+
